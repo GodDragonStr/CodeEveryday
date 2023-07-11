@@ -43,7 +43,8 @@ int main(){
 
     std::cout << (n2.next)->value << std::endl;
 
-    // 如果不对其进行赋值会发生什么呢
+    // 如果不对其进行赋值会出现error
+    // 因此总结出常用的赋值方式: 1.使用LinkNode a(1)赋值； 2.使用LinkNode a = LinkNode(1)赋值；3.使用LinkNode *a = new LinkNode(1)
     
     LinkNode1 e(5);
     LinkNode1 f(6);
