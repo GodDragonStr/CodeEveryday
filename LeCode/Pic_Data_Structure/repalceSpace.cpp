@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// 思路一： 创建一个新的string，进行一次遍历返回新的字符串，即牺牲空间换取时间
 class Solution{
     public:
     string replacePlace(string s){
@@ -15,8 +16,8 @@ class Solution{
             else{
                 s_new += character;
             }
-            cout << typeid(character).name() << endl;
-            cout << character << endl;
+            // cout << typeid(character).name() << endl;
+            // cout << character << endl;
         }
         return s_new;
     }
@@ -24,6 +25,25 @@ class Solution{
         return s;
     }
 };
+
+// 思路二： 将其看做原地题
+class Solution1{
+    public:
+    string replaceSpace(string s){
+        int count = 0, len = s.size();
+        // int len = s.size();
+        for( auto character : s ){
+            if(character == ' '){
+                count++;
+            }
+        }
+        s.resize(len + 2*count);
+        cout << s.size() << endl;
+        
+    }
+};
+
+
 
 int main(){
     
@@ -41,6 +61,9 @@ int main(){
     cout << "s_tem: " << s_tem << endl;
     s_new = replace.replacePlace(s_tem);
     cout << "s_new: " << s_new << endl;
+
+
+
  
     return 0;
 }
