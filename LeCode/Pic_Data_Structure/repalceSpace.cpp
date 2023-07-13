@@ -9,7 +9,7 @@ class Solution{
     public:
     string replacePlace(string s){
         string s_new;
-        for( auto character:s){
+        for ( auto character:s) {
             if(character == ' '){
                 s_new += "%20";
             }
@@ -31,19 +31,33 @@ class Solution1{
     public:
     string replaceSpace(string s){
         int count = 0, len = s.size();
-        // int len = s.size();
-        for( auto character : s ){
+
+        // cout << s.size() << endl;
+
+        for ( auto character : s ) {
             if(character == ' '){
                 count++;
             }
         }
         s.resize(len + 2*count);
-        cout << s.size() << endl;
-        
+
+        // cout << s.size() << endl;
+
+        // if s[i] == ' ', then s[i] = %, s[i+1] = 2, s[i+2] = 0
+        for (int i = len - 1, j = s.size() - 1; i < j; i--, j--) {
+            if (s[i] != ' ') {
+                s[j] = s[i];
+            }
+            else{
+                s[j] = '0';
+                s[j-1] = '2';
+                s[j-2] = '%';
+                j -= 2;
+            }
+        }
+        return s;
     }
 };
-
-
 
 int main(){
     
@@ -51,19 +65,27 @@ int main(){
     string s_new;
     Solution replace;
 
+    string s1_tem;
+    string s1_new;
+    Solution1 replace1;
+
     // this >> will stop reading when it encounters a space or newlinw character
     // cin >> s_tem;
  
-    cout << "please enter a string" << endl;
+    cout << "method1: please enter a string" << endl;
     cin;
-
     getline(cin, s_tem);
+
     cout << "s_tem: " << s_tem << endl;
     s_new = replace.replacePlace(s_tem);
     cout << "s_new: " << s_new << endl;
 
+    cout << "methode2: please enter a string" << endl;
+    cin;
+    getline(cin, s1_tem);
+    s1_new = replace1.replaceSpace(s1_tem);
 
+    cout << s1_new << endl;
 
- 
     return 0;
 }
