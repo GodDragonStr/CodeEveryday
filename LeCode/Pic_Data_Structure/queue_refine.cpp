@@ -29,6 +29,11 @@ public:
     }
 };
 
+typedef struct node {
+    int value = 0;
+    node *next = NULL;
+    node(int x): value(x), next(NULL) {}
+}Node, *Link;
 
 int main() {
     std::list<int> list_initial {1, 2, 3};    // 创建stack堆栈时不能通过列表初始化即 -----xxxx---stack<int> values {1,2}----xxxxxx----
@@ -43,6 +48,29 @@ int main() {
 
     int test2 = my_queue.deleteHead();
     std::cout << "test:" << test1 << std::endl;
+
+    node h(1);
+    Node h1(1);
+
+    node *b;
+    Link b1;
+    node *b2 = (Node *)malloc(sizeof(Node)); // malloc返回一个空间给Node *
+    node *b3 = (Node *)malloc(sizeof(Link));
+
+    node a = node(1);
+    node a1 = Node(1);
+    node *a2 = Link(1);
+    node *a3 = new Node(1); // new本来就是返回的一个指针
+    node a4(a1);
+
+    Node c = Node(1);
+    Node *d = new Node(1);  // 初始化了
+    Node *e = (Link)malloc(sizeof(Node));   // 没有初始化
+    // Link == Node *
+    Link g = new Node(1);   // 初始化了
+    Link f = (Link)malloc(sizeof(Node));    // 没有初始化
+
+    std::cout << a.value << std::endl;
 
     return (0);
 }
