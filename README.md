@@ -1,5 +1,5 @@
 # CodeEveryday
-如果我的git有颜色，那一定是深绿色
+This is the way.
 
 # LeCode
-C++ developing ...,提前cd到此目录
+Please modify the g++ path in .vscode file, then run the code!
