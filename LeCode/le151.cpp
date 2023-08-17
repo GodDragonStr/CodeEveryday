@@ -40,11 +40,58 @@ public:
     }
 };
 
+class Solution2 {
+public:
+    string reverseWords(string s) {
+        // 去除多余空格
+        int slow = 0, fast = 0;
+        while(fast < s.size()) {
+            if (s[fast] == ' ' && fast + 1 < s.size() && s[fast + 1] == ' ') {
+                fast++;
+                continue;
+            }
+
+            s[slow++] = s[fast++];
+        }
+
+        if (s[slow - 1] == ' ') s.erase(s.begin() + - 1 + slow-- );
+        if (s[0] == ' ') {
+            s.erase(s.begin());
+            slow--;
+        }
+
+        // 反转整个字符串
+        s.resize(slow);
+        reverse(s.begin(), s.end());
+
+        cout << s << endl;
+
+        slow = 0;
+        fast = 0;
+        // 反转字符串里面的单词
+        while (fast < s.size()) {
+            if (s[fast] == ' ') {
+                reverse(s.begin() + slow, s.begin() + fast);
+                slow = ++fast;
+            }
+
+            fast++;
+        }
+
+        reverse(s.begin() + slow, s.begin() + fast);
+
+
+        return s;
+    }
+};
 
 int main () {
-    string a = "my am you";
-    swap(*a.begin(), *(a.begin()+1));
-    cout << a << endl;
+    Solution2 myfunc;
+    string a = "  my am  you  ";
+    string b = myfunc.reverseWords(a);
+    
+    // swap(*a.begin(), *(a.begin()+1));
+    cout << b << endl;
 
     return (0);
 }
