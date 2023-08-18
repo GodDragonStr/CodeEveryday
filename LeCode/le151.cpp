@@ -64,7 +64,7 @@ public:
         s.resize(slow);
         reverse(s.begin(), s.end());
 
-        cout << s << endl;
+        // cout << s << endl;
 
         slow = 0;
         fast = 0;
@@ -74,12 +74,10 @@ public:
                 reverse(s.begin() + slow, s.begin() + fast);
                 slow = ++fast;
             }
-
             fast++;
         }
 
         reverse(s.begin() + slow, s.begin() + fast);
-
 
         return s;
     }
