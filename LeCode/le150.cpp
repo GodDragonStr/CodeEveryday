@@ -52,6 +52,41 @@ public:
     }
 };
 
+class Solution2 {
+public:
+    int evalRPN(vector<string>& tokens) {
+        stack<int> calculate;
+        for (auto a : tokens) {
+            if (a == "+" || a == "-" || a == "*" || a == "/") {
+                int x1 = calculate.top();
+                calculate.pop();
+                int x2 = calculate.top();
+                calculate.pop();
+
+                if (a == "+") calculate.push(x2 + x1);
+                else if (a == "-") calculate.push(x2 - x1);
+                else if (a == "*") calculate.push(x2 * x1);
+                else if (a == "/") calculate.push(x2 / x1);
+            }
+            else {
+                int n = 0;
+                for (auto c : a) {
+                    if (c == '-') 
+                        continue;
+    
+                    n = n * 10 + (c - '0');
+                }
+                if (a[0] == '-') n = -n;
+                // atoi(token.c_str())
+                calculate.push(n);
+            }
+        }
+
+        return calculate.top();
+    }
+};
+
+
 int main () {
     char a = 'a';
     string b = "1fasdfasdfasf";
