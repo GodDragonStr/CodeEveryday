@@ -3,5 +3,41 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ScannerDemo1",
+            "request": "launch",
+            "mainClass": "ScannerDemo1",
+            "projectName": "CodeEveryday_2f2f0d04"
+        },
+        {
+            "type": "java",
+            "name": "Literal",
+            "request": "launch",
+            "mainClass": "Literal",
+            "projectName": "CodeEveryday_2f2f0d04"
+        },
+        {
+            "type": "java",
+            "name": "Hello2",
+            "request": "launch",
+            "mainClass": "Hello2",
+            "projectName": "CodeEveryday_2f2f0d04"
+        },
+        {
+            "type": "java",
+            "name": "Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "CodeEveryday_2f2f0d04"
+        },
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "CodeEveryday_2f2f0d04"
+        }
+    ]
 }
