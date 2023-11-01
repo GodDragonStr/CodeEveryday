@@ -10,10 +10,17 @@ public class HM6 {
         } else {
             if (num % 6 == 0) {
                 System.out.println(true);
-                return;
             }
             else {
-                num /= 10;
+                while (num > 0) {
+                    if (num % 10 == 6) {
+                        System.out.println(true);
+                        return;
+                    }
+                    num /= 10;
+                    if (num == 0)
+                        System.out.println(false);
+                }
             }
         }
     }
