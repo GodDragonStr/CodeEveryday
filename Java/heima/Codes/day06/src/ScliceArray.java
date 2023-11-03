@@ -6,7 +6,7 @@ public class ScliceArray {
         int [] scliceArray = new int[toIndex - fromIndex + 1];
         scliceArray = arrayOfRange(aArray, fromIndex, toIndex);
         for (int i = 0; i < scliceArray.length; i++){
-            System.out.println(scliceArray[i]);
+            System.out.print(scliceArray[i] + " ");
         }
     }
 
