@@ -1,26 +1,29 @@
 import torch
 import numpy as np
+import seaborn as sns
 
 import matplotlib.pyplot as plt
 
-x1 = torch.load('./x1_feature.pt')
-x2 = torch.load('./x2_feature.pt')
+x1 = torch.load(r'CVCode\visual\feature_vis\x1_feature.pt')
+x2 = torch.load(r'CVCode\visual\feature_vis\x2_feature.pt')
+
 
 print(x1[0].shape)
 
+x1[0] = x1[0].detach().to("cpu")
+
 y1 = x1[0].reshape(64, 64, 64)
-y1 = y1.detach().cpu().numpy()
-print(type(y1), y1.shape)
-y1 = np.mean(y1, axis=2)
-max1 = np.abs(y1.max())
-y1 = np.abs(np.stack([y1, y1, y1], axis=2) / max1)
-y1 = y1 / y1.max()
+print(y1.shape)
+y1_mean = torch.mean(torch.abs(y1), dim=0, keepdim=True)
+print(y1_mean.shape)
+y1_squeeze = torch.squeeze(y1_mean)
+print(y1_squeeze.shape)
+y1_numpy = y1_squeeze.numpy()
+print(y1_numpy.shape , type(y1_numpy))
 
-print(y1.max())
-print(y1.min())
-
-# print(type(y1), y1.shape)
-
-plt.imshow(y1)
+sns.set(font_scale=1.5)
+plt.figure(figsize=(10, 8))
+# sns.heatmap(data=y1_numpy, cmap="YlGnBu", annot=False, fmt=".2f")
+sns.heatmap(data=y1_numpy, cmap="YlGnBu", annot=False)
+plt.title("Feature map")
 plt.show()
-# plt.imsave('./vis_y1', y1)

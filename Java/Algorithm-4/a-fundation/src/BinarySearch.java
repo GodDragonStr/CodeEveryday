@@ -14,14 +14,23 @@ public class BinarySearch {
         return -1;
     }
 
-    public static void main(String[] args) {
-        int[] whitelist = In.readInts(args[0]);
-        Arrays.sort(whitelist);
-        while (!StdIn.isEmpty()) {
-            int key = StdIn.readInt();
-            if (rank(key, whitelist) == -1) {
-                StdOut.println(key);
-            }
+    public static int reRandk(int key, int[] a, int lp, int hp) {
+        if (hp <= lp || a == null || a.length == 0) return -1;
+
+        int mid = (lp + hp) / 2;
+        if (a[mid] == key)
+            return mid;
+        else if (a[mid] > key) {
+            hp = mid;
+            return reRandk(key, a, lp, hp);
+        } else{
+            lp = mid + 1;
+            return reRandk(key, a, lp, hp);
         }
+    }
+
+    public static void main(String[] args) {
+        int[] arra = {1, 2, 3, 4, 5, 7, 6};
+        System.out.println(reRandk(8, arra, 0, arra.length));
     }
 }
