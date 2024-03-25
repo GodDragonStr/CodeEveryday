@@ -1,0 +1,86 @@
+<!-- 文档类型 -->
+<!DOCTYPE html>
+<!-- 指定语言language -->
+<html lang="en">
+    <head>
+        <!-- 设置样式 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewprot" content="width=device-width", initial-scale="1.0">
+        <title> JavaScript Introduction </title>
+        <!-- <link ref="stylesheet"  href="myStyle.css"> -->
+
+        <link rel="stylesheet" href="./style.css"> 
+    </head>
+    <body>
+        <!-- 内部脚本 -->
+        <!-- <script> alert("Welcome to JavaScript"); </script> -->
+        <h1>标题元素1</h1>
+        <h1>标题元素2</h1>
+        <h1>标题元素3</h1>
+        <script src="./js.js"></script>
+        <br>
+        <div id="div1">
+            人勤春来早，春耕农事忙。立春之后，由南到北，我国春耕春管工作陆续展
+            开，春天的田野处处生机盎然。
+            <p>
+                人勤春来早，春耕农事忙。立春之后，由南到北，我国春耕春管工作陆续展
+               开，春天的田野处处生机盎然。
+            </p>
+        </div>
+
+
+        <div id="div1">
+            <!-- 表单 -->
+            <form action="" method="get" id="center">
+                name: <input type="text" name="name">
+                password: <input type="password" name="password"> <br>
+                gender: 
+                <!-- 加入label文字也可以点击 -->
+                    <label><input type="radio" name="gender" value="1"> male</label>    
+                    <label><input type="radio" name="gender" value="2"> feamale</label>
+                    <br>
+                hobby: 
+                    <input type="checkbox" name="hobby" value="java"> java
+                    <input type="checkbox" name="hobby" value="python"> python
+                    <br>
+                profile img: 
+                    <input type="file" name="image">
+                    <br>
+                <!-- date time datetime -->
+                time:
+                    <input type="datetime-local" name="time">
+                    <br>
+                age:
+                    <input type="number" name="age">
+                    <br>
+                degree:
+                    <select name="degree">
+                        <option value="">-----------paleas select-----------</option>
+                        <option value="1">undergraduate</option>
+                        <option value="2">postgraduate</option>
+                        <option value="3">doctor</option>
+                    </select>
+                    <br>
+                    <br>
+                description:
+                    <textarea name="description" cols="30" role="20"></textarea>
+                    <br>
+                
+                <input type="hidden" name="id" value="1">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+                <input type="button" value="button">
+                <br>
+            </form>
+        </div>
+
+        <input type="button" id="bid" value="button2">
+    
+        <script>
+            window.document.getElementById('bid').onclick=function(){
+                alert("being clicked");
+            }
+        </script>
+    </body>
+</html>

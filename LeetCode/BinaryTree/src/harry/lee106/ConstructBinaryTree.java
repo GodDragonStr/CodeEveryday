@@ -1,5 +1,7 @@
 package harry.lee106;
 
+import org.junit.Test;
+
 import javax.swing.text.html.HTMLDocument;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +39,24 @@ public class ConstructBinaryTree {
 //    public static void changeRootChild (TreeNode root, TreeNode childRoot) {
 //        root.left = childRoot;
 //    }
+
+    @Test
+
+
+
+    public void test1 () {
+        String s1 = new String("12345");
+        Integer i1 = 22222;
+        Integer i2 = Integer.parseInt(s1);
+        String s2 = i1.toString();
+        System.out.println(i1.intValue()==i1);
+        System.out.println(i1.hashCode());
+        System.out.println("___________________________________________");
+        System.out.println(s1.length());
+        System.out.println(s1.charAt(0));
+        System.out.println(s1.indexOf("5"));
+        System.out.println(s1.substring(1, 3));
+    }
 }
 
 class TreeNode {
@@ -71,6 +91,7 @@ class Solution {
         System.out.println(root.val);
         int currNodeInorderIdex = findIdx(inorder,  root.val);
         System.out.println(currNodeInorderIdex);
+
 
         if (currNodeInorderIdex != 0) {
             root.left = new TreeNode();

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewprot" content="width=device-width", initial-scale="1.0">
+        <title> Ajax & Axios </title>
+        <script src="D:\Repositery\CodeEveryday\JavaWeb\Ajax\node_modules\axios\dist\axios.js"></script>
+    </head>
+    <body>
+        <input type="button" value="get_data" onclick="get()">
+        <input type="button" value="delete_data" onclick="post()">
+    </body>
+
+    <script>
+        function get() {
+            // 基于axios发出一个get请求->返回一个接受回调函数
+            axios({
+                method: "get",
+                url: "http://yapi.smart-xwork.cn/mock/169327/emp/list"
+            }).then(result => {
+                console.log(result.data);
+            })
+        }
+
+        function post() {
+            // 基于axios发出一个post请求
+            axios({
+                method: "post", 
+                url: "http://yapi.smart-xwork.cn/mock/169327/emp/deleteById",
+                data: "id=1"
+            }).then(result => {
+                console.log(result.data);
+            })
+        }
+
+    </script>
+</html>

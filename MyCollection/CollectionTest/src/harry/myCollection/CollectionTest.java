@@ -7,6 +7,7 @@ public class CollectionTest {
         return ;
     }
 
+
     @Test
     public void test1() {
         String s1 = "abc";

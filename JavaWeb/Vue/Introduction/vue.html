@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewprot" content="width=device-width", initial-scale="1.0">
+        <title> Vue Introduction </title>
+        <script src="./js/vue.js"></script>
+    </head>
+    <body>
+        <div id="area1">
+            <img id="img1" src="./img/on.gif">
+            <!-- 绑定v-on:click="buttonClick()" -->
+            <input type="button" value="clickbutton" v-on:click="buttonClick()" >
+        </div>
+
+        <div id="area2">
+            <a v-bind:href="url" target="_blank">link</a>
+            <input type="text" v-model:value="url">
+        </div>
+        
+    </body>
+
+    <script>
+        var img1 = window.document.getElementById("img1");
+
+        new Vue({
+            el: '#area1',
+            data: {
+                url: "https://www.baidu.com",
+                imgUrl: "./img/off.gif"
+            },
+            methods: {
+                // buttonClick方法
+                buttonClick: function() {
+                    var img2 = window.document.getElementById("img1");
+                    if (img2.src == img1.src) {
+                        img2.src = "./img/off.gif";
+                    } else {
+                        img2.src = "./img/on.gif";
+                    }
+                }
+            }
+        })
+
+        new Vue({
+            el: '#area2',
+            data: {
+                url: "https://www.baidu.com"
+            }
+        })
+    </script>
+</html>
