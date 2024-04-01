@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/hello/pom.xml" />
         <option value="$PROJECT_DIR$/mave-project01/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-project-2/pom.xml" />
+        <option value="$PROJECT_DIR$/mave-project-3/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

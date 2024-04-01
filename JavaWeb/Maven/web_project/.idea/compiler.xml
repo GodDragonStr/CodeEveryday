@@ -9,6 +9,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="maven-project-2" />
+        <module name="mave-project-3" />
         <module name="mave-project01" />
       </profile>
     </annotationProcessing>
