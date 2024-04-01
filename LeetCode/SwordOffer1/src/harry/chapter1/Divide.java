@@ -9,7 +9,12 @@ public class Divide {
         System.out.println(Integer.toHexString(Integer.MIN_VALUE));
         System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
         System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
-        System.out.println(Integer.toBinaryString(-1));
+        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE >> 1));
+        // 负数的二进制是补码展示的:
+        // 0 0 0 0 0 0 0 1 -> 1 1 1 1 1 1 1 0 + 1 -> 1 1 1 1 1 1 1 1
+        // 再次取补码可以得到原来的数字:
+        // 1 1 1 1 1 1 1 1 -> 0 0 0 0 0 0 0 0 + 1 -> 0 0 0 0 0 0 0 1
+        System.out.println(Integer.toBinaryString(-2 >> 1));
         if (Integer.MAX_VALUE + Integer.MAX_VALUE > Integer.MAX_VALUE) {
             System.out.println("OverFlow!!!");
         }
@@ -23,14 +28,14 @@ public class Divide {
 
         scan.close();
 
-        Solution myS = new Solution();
+        Solution1 myS = new Solution1();
         int result = myS.divide(dividend, divisor);
         System.out.println(result);
     }
 }
 
 
-class Solution {
+class Solution1 {
     public int divide (int dividend, int divisor) {
         // 转换为负数空间运算
         // 特殊溢出-2^31 / (-1)
