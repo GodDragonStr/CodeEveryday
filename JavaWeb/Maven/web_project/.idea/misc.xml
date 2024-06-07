@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/springboot-2" />
+    <file type="web" url="file://$PROJECT_DIR$/test1" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -8,11 +11,15 @@
         <option value="$PROJECT_DIR$/mave-project01/pom.xml" />
         <option value="$PROJECT_DIR$/maven-project-2/pom.xml" />
         <option value="$PROJECT_DIR$/mave-project-3/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-project-4/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-quickstart/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/hello/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
       </set>
     </option>
   </component>

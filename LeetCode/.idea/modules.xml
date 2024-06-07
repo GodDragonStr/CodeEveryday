@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/ArrayS/ArrayS.iml" filepath="$PROJECT_DIR$/ArrayS/ArrayS.iml" />
       <module fileurl="file://$PROJECT_DIR$/BackTrack/BackTrack.iml" filepath="$PROJECT_DIR$/BackTrack/BackTrack.iml" />
       <module fileurl="file://$PROJECT_DIR$/BinaryTree/BinaryTree.iml" filepath="$PROJECT_DIR$/BinaryTree/BinaryTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Graphic/Graphic.iml" filepath="$PROJECT_DIR$/Graphic/Graphic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GreedyAlgorithm/GreedyAlgorithm.iml" filepath="$PROJECT_DIR$/GreedyAlgorithm/GreedyAlgorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyInput/MyInput.iml" filepath="$PROJECT_DIR$/MyInput/MyInput.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwordOffer1/SwordOffer1.iml" filepath="$PROJECT_DIR$/SwordOffer1/SwordOffer1.iml" />

@@ -9,13 +9,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-quickstart" />
+        <module name="mave-project01" />
         <module name="maven-project-2" />
         <module name="mave-project-3" />
-        <module name="mave-project01" />
+        <module name="maven-project-4" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hello" target="1.8" />
+      <module name="untitled" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-quickstart" options="-parameters" />
+    </option>
   </component>
 </project>
